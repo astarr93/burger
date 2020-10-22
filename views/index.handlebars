@@ -1,12 +1,12 @@
 <div class="container">
     <div class="center">
-        {{!-- <img src="../public/assets/img/burger.png" alt="burger"> --}}
+        <img src="../public/assets/img/burger.png" alt="burger">
+
+        <h1>Eat That Burger!</h1>
 
         <div class="container">
             <div class="row">
-                <div class="col-sm">
-
-                    <h1>Eat That Burger!</h1>
+                <div class="col-sm ml-auto mr-auto">
 
                     <ul>
                         {{#each burger}}
@@ -15,11 +15,10 @@
                         {{/unless}}
                         {{/each}}
                     </ul>
+
                 </div>
-                <div class="col-sm">
 
-
-                    <h2>Devoured</h2>
+                <div class="col-sm ml-auto mr-auto">
 
                     <ul>
                         {{#each burger}}
@@ -28,24 +27,21 @@
                         {{/if}}
                         {{/each}}
                     </ul>
+
                 </div>
             </div>
         </div>
+
         <div class="center">
 
-            <h2>Add a burger</h2>
             <form class="create-form">
 
                 <div class="form-group">
-                    <label for="burger">Burger Name:</label>
-                    <input type="text" id="burger" name="name">
+                    <textarea type="text" id="devoured" name="name" value="1" </textarea>
                 </div>
 
                 <div class="form-group">
-                    <label for="Devoured">Devoured?</label><br>
-                    <input type="button" name="Devoured" value="1" checked> Devoured!<br>
-                    <input type="button" name="Devoured" value="0"> Fresh
-
+                    <button type="submit" class="btn-info">Submit<br>
                 </div>
 
                 <button type="submit">Add burger</button>
