@@ -1,14 +1,14 @@
 const orm = require("../config/orm");
 
 const burger = {
-    select: function (cb) {
-        orm.select("burgers", cb);
+    selectAll: function (cb) {
+        orm.selectAll("burgers", cb);
     },
-    insert: function (data, cb) {
-        orm.insert("burgers", data, cb);
+    insertOne: function (data, cb) {
+        orm.insertOne("burgers", data, cb);
     },
-    update: function (data, update, cb) {
-        orm.update("burgers", cb);
+    updateOne: function (data, update, cb) {
+        orm.updateOne("burgers", data, update, cb);
     },
 };
 

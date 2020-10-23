@@ -17,3 +17,7 @@ li {
 .form-group {
     margin-bottom: 5px;
 }
+
+body {
+    background-color: black;
+}

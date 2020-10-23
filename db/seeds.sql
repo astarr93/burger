@@ -1,4 +1,4 @@
-USE burgers_db
+USE burgers_db;
 
 INSERT INTO burgers
     (id, burger_name, devoured)
