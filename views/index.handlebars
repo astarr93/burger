@@ -1,39 +1,38 @@
 <div class="container">
     <div class="center">
-
         <h1>Eat That Burger!</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm ml-auto mr-auto">
 
-                    <ul>
-                        {{#each burger}}
-                        {{#unless devoured}}
-                        {{> burger/burger-block devoured=true}}
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
 
-                </div>
-
-                <div class="col-sm ml-auto mr-auto">
-
-                    <ul>
-                        {{#each burger}}
-                        {{#if devoured}}
-                        {{> burger/burger-block devoured=false}}
-                        {{/if}}
-                        {{/each}}
-                    </ul>
-
-                </div>
-            </div>
         </div>
 
-        <div class="center">
+        <div class="col-sm">
 
-            <form class="create-form">
+            <ul>
+                {{#each burger}}
+                {{#if devoured}}
+                {{> burger/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+
+        </div>
+    </div>
+
+
+        <div class="row">
+
+            <form class="create-form center">
 
                 <div class="form-group">
                     <textarea type="text" id="devoured" name="name" value="1"></textarea>
@@ -44,7 +43,9 @@
                 </div>
 
                 <button type="submit">Add burger</button>
+
             </form>
+
         </div>
-    </div>
+
 </div>

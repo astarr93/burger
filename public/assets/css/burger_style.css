@@ -19,5 +19,17 @@ li {
 }
 
 body {
-    background-color: black;
+    background-color: gray;
+}
+
+h1 {
+    text-align: center;
+    padding: 2em;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: .5em;
 }
