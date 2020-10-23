@@ -27,7 +27,7 @@ $(function () {
 
         const submitBurger = (burger) => {
             return $.ajax({
-                url: "/api/notes",
+                url: "/api/burgers",
                 data: newBurger,
                 method: "POST",
             })
