@@ -1,6 +1,7 @@
 <div class="container">
     <div class="center">
         <h1>Eat That Burger!</h1>
+        <img src="/assets/img/burger.png" alt="burger" />
     </div>
     <div class="row">
         <div class="col-sm">
@@ -30,22 +31,20 @@
     </div>
 
 
-        <div class="row">
+    <div class="row">
 
-            <form class="create-form center">
+        <form class="create-form center">
+            <legend>
 
-                <div class="form-group">
-                    <textarea type="text" id="devoured" name="name" value="1"></textarea>
-                </div>
-
-                <div class="form-group">
+                <div class="form-group" id="textarea">
+                    <label for="name">Add burger:</label>
+                    <textarea type="text" id="devoured" name="name" value="1" maxlength="30"></textarea>
                     <button type="submit" class="btn-info">Submit<br>
                 </div>
 
-                <button type="submit">Add burger</button>
+            </legend>
+        </form>
 
-            </form>
-
-        </div>
+    </div>
 
 </div>

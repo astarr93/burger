@@ -1,11 +1,15 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
+/* Class selectors*/
+
+.col-sm {
+    display: flex;
+    justify-content: space-between;
 }
 
-.label {
-    font-weight: bold;
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: .5em;
 }
 
 .create-update-form {
@@ -18,7 +22,14 @@ li {
     margin-bottom: 5px;
 }
 
+.label {
+    font-weight: bold;
+}
+
+/* HTML tag selectors*/
+
 body {
+    font-size: larger;
     background-color: gray;
 }
 
@@ -27,9 +38,35 @@ h1 {
     padding: 2em;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding: .5em;
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    padding-left: 2em;
+    padding-bottom: 2em;
+}
+
+
+
+label {
+    padding-right: 15px;
+}
+
+textarea {
+    height: 60px;
+    width: 350px;
+    resize: none;
+}
+
+#textarea {
+    white-space: nowrap;
+}
+
+#textarea * {
+    vertical-align: middle;
 }
