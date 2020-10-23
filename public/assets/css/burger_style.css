@@ -51,8 +51,6 @@ img {
     padding-bottom: 2em;
 }
 
-
-
 label {
     padding-right: 15px;
 }
@@ -69,4 +67,8 @@ textarea {
 
 #textarea * {
     vertical-align: middle;
+}
+
+#eaten {
+    text-align: center;
 }
