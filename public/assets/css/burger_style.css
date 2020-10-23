@@ -56,9 +56,10 @@ label {
 }
 
 textarea {
-    height: 60px;
-    width: 350px;
+    height: 45px;
+    width: 400px;
     resize: none;
+    margin-right: 15px;
 }
 
 #textarea {

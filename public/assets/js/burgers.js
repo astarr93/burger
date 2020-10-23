@@ -1,12 +1,14 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
-    $(".devoured").on("click", function (event) {
+    $("#devoured").on("submit", function (event) {
         var id = $(this).data("id");
         var devoured = { devoured: true, };
 
-        // Send the PUT request.
+        console.log("HERE")
+
+        // Send the POST request.
         $.ajax("/api/burgers/" + id, {
-            type: "PUT",
+            type: "POST",
             data: devoured,
         }).then(
             function () {
