@@ -4,5 +4,5 @@ INSERT INTO burgers
     (id, burger_name, devoured)
 VALUES
     (1, 'Bacon Jam Burger', devoured),
-    (2, 'QTR Pounder with Cheese', devoured),
-    (3, 'Burbon Cinnamon Angus', devoured);
+    (2, 'Double Cheese Burger', devoured),
+    (3, 'Vegan Burger', devoured);
