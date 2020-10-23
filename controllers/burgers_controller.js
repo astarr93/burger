@@ -13,6 +13,7 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
+    console.log("here 3")
     burger.insertOne(req.body, function (result) {
         if (result.changedRows === 0) {
             return res.status(404).end();
