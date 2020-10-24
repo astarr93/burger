@@ -16,6 +16,8 @@
 
 It's a fun little single-page like app using node, express, MySQL, and handlebars.js to serve up freshly cooked HTML (get it? 😅)
 
+![image](https://user-images.githubusercontent.com/47404581/97066021-aba9e480-157f-11eb-80d3-3dda062bc038.png)
+
 # Installation
 
 You can clone the repo and run locally using node.js
