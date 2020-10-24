@@ -1,16 +1,17 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
     $(".eatBurger").on("click", function (event) {
-        console.log("here 1")
+        console.log("You said you wanted to eat the burger");
         var id = $(this).data("id");
         var devoured = { devoured: true, };
-
+        console.log("Posting Burger to the board");
         // Send the POST request.
         $.ajax("/api/burgers/" + id, {
             type: "POST",
             data: devoured,
         }).then(
             function () {
+                console.log("Success!");
                 location.reload();
             }
         );
