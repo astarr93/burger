@@ -12,8 +12,8 @@ router.get("/", function (req, res) {
     });
 });
 
-router.post("/api/burgers", function (req, res) {
-    console.log("here 3")
+router.post("/api/burger", function (req, res) {
+
     burger.insertOne(req.body, function (result) {
         if (result.changedRows === 0) {
             return res.status(404).end();
@@ -24,14 +24,15 @@ router.post("/api/burgers", function (req, res) {
 
 router.put("/api/burgers/:id", function (req, res) {
     const condition = { id: req.params.id };
-    console.log("4");
+    console.log("Route Hit")
+
     burger.updateOne({ devoured: true }, condition, function (result) {
-        if (result.changedRows === 0) {
-            return res.status(404).end();
-        }
-        res.status(200).end();
-    }
-    );
+        //     if (result.changedRows === 0) {
+        //         return res.status(404).end();
+        //     }
+        //     res.status(200).end();
+        console.log("end of route query")
+    });
 });
 
 // Export routes for server.js to use.
