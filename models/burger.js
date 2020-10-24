@@ -10,12 +10,6 @@ const burger = {
     updateOne: function (data, update, cb) {
         orm.updateOne("burgers", data, update, cb);
     },
-    objToSql: function (data, update, cb) {
-        orm.objToSql(data, update, cb);
-    },
-    getParams: function (data, cb) {
-        orm.getParams(data, cb);
-    },
 };
 
 module.exports = burger;

@@ -1,34 +1,34 @@
 const connection = require('./connection');
 
 
+//  This is helper boilerplate to dynamically pass all key=value object data to the db
+function printQuestionMarks(num) {
+    var arr = [];
+
+    for (var i = 0; i < num; i++) {
+        arr.push('?');
+    }
+
+    return arr.toString();
+}
+
+// This is helper boilerplate to format and "prep" all key-value object data for db query 
+function objToSql(ob) {
+    var arr = [];
+    for (var key in ob) {
+        var value = ob[key];
+        if (Object.hasOwnProperty.call(ob, key)) {
+            if (typeof value === 'string' && value.indexOf(' ') >= 0) {
+                value = `'${value}'`;
+            }
+            arr.push(key + "=" + value);
+        }
+    }
+    return arr.toString();
+}
+
 // Object Relational Mapping functions.
 const orm = {
-
-    //  This is helper boilerplate to dynamically pass all key=value object data to the db
-    getParams: function printQuestionMarks(num) {
-        var arr = [];
-
-        for (var i = 0; i < num; i++) {
-            arr.push('?');
-        }
-
-        return arr.toString();
-    },
-
-    // This is helper boilerplate to format and "prep" all key-value object data for db query 
-    objToSql: function objToSql(ob) {
-        var arr = [];
-        for (var key in ob) {
-            var value = ob[key];
-            if (Object.hasOwnProperty.call(ob, key)) {
-                if (typeof value === 'string' && value.indexOf(' ') >= 0) {
-                    value = `'${value}'`;
-                }
-                arr.push(key + "=" + value);
-            }
-        }
-        return arr.toString();
-    },
 
     selectAll: function (tableInput, cb) {
         var query = `SELECT * FROM ${tableInput}`;
