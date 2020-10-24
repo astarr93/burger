@@ -20,7 +20,7 @@ It's a fun little single-page like app using node, express, MySQL, and handlebar
 
 # Installation
 
-You can clone the repo and run locally using node.js
+You can clone the repo and run locally using Node.js or access the hosted app on heroku: https://cryptic-ridge-80012.herokuapp.com/
 
 # Usage
 
